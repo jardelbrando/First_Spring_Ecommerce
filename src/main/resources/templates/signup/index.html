@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html
+        lang="pt_BR"
+        xmlns:th="http://www.thymeleaf.org"
+        th:replace="fragments/layout :: layout(~{::title}, ~{::link}, ~{::script}, ~{::main})"
+>
+    <head>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" th:href="@{/resources/styles/signup/index.css}">
+        <title>Rift Shop</title>
+    </head>
+    <body>
+        <main>
+            <div class="registerreload">
+                <form id="submit-form" action="index.html" th:action="@{/signup}" th:object="${user}" method="post">
+                    <div class="formRegister">
+                        <h1>Cadastre-se</h1>
+                        <p>CPF:</p>
+                        <input
+                                type="text"
+                                class="cpf"
+                                th:field="*{cpf}"
+                                placeholder="Digite seu cpf"
+                                required>
+                        <p>Nome:</p>
+                        <input
+                                name="name"
+                                id="name"
+                                type="text"
+                                th:field="*{name}"
+                                placeholder="Digite seu nome completo"
+                                required>
+                        <p>Email:</p>
+                        <input
+                                name="email"
+                                id="email"
+                                type="text"
+                                th:field="*{email}"
+                                placeholder="Digite seu email"
+                                required>
+                        <p>Confirme seu email:</p>
+                        <input
+                                name="confirmedEmail"
+                                id="confirmedEmail"
+                                type="text"
+                                placeholder="Confirme seu email"
+                                required>
+                        <p>Senha:</p>
+                        <input
+                                name="password"
+                                id="password"
+                                type="password"
+                                th:field="*{password}"
+                                value="FakePSW"
+                                placeholder="Digite sua senha"
+                                required>
+                        <p>Confirme sua senha:</p>
+                        <input
+                                name="confirmedPassword"
+                                id="confirmedPassword"
+                                type="password"
+                                value="FakePSW"
+                                placeholder="Confirme sua senha"
+                                required>
+                        <p>Data de nascimento:</p>
+                        <input
+                                name="birth"
+                                id="birth"
+                                type="date"
+                                th:field="*{birth}"
+                                required>
+                        <p>CEP:</p>
+                        <input
+                                name="cep"
+                                id="cep"
+                                class="cep"
+                                type="text"
+                                th:field="*{cep}"
+                                placeholder="00000-000"
+                                required>
+                        <p>Selecione seu estado:</p>
+                        <input
+                                name="state"
+                                id="state"
+                                th:field="*{state}"
+                                type="text"
+                                placeholder="">
+                        <p>Selecione sua cidade:</p>
+                        <input
+                                name="city"
+                                id="city"
+                                th:field="*{city}"
+                                type="text"
+                                placeholder="">
+                        <p>Bairro:</p>
+                        <input
+                                name="district"
+                                id="district"
+                                type="text"
+                                th:field="*{district}"
+                                placeholder="Digite o nome do seu bairro">
+                        <p>Rua:</p>
+                        <input
+                                name="street"
+                                id="street"
+                                type="text"
+                                th:field="*{street}"
+                                placeholder="Digite o nome da sua rua">
+                        <p>Número:</p>
+                        <input
+                                name="number"
+                                id="number"
+                                type="text"
+                                th:field="*{number}"
+                                placeholder="Digite o seu número residencial">
+                        <button id="submitButton" class="submit">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <script type="text/javascript" th:src="@{/resources/scripts/fragments/masks.js}"></script>
+        <script type="text/javascript" th:src="@{/resources/scripts/users/signup.js}"></script>
+    </body>
+</html>

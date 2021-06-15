@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html
+        lang="pt_BR"
+        xmlns:th="http://www.thymeleaf.org"
+        th:replace="fragments/layout :: layout(~{::title}, ~{::link}, _, ~{::main})"
+        >
+    <head>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" th:href="@{/resources/styles/login/index.css}">
+        <title>Rift Shop</title>
+    </head>
+    <body>
+        <main>
+            <div class="loginreload">
+                <form action="index.html" th:action="@{/}" method="post">
+                    <div class="form">
+                        <h1>Login</h1>
+                        <p>Email:</p>
+                        <input type="email" name="username" placeholder="Digite seu email" required>
+                        <p>Senha:</p>
+                        <input id="password" type="password" name="password" value="FakePSW" placeholder="Digite sua senha" required>
+                        <div class="form2">
+                            </br>
+                            <a href="/signup">Não possuo uma conta</a>
+                            <a href="">Esqueci minha senha</a>
+                            </br>
+                        </div>
+                        <button class="submit">Entrar</button>
+                    </div>
+                </form>
+            </div>
+            <div th:if="${message} != null" th:object="${message}" th:class="*{type}" id="toast">
+                <span th:text="*{title}">Title</span>
+                <span th:text="*{message}">Message</span>
+            </div>
+        </main>
+        <script src="/resources/scripts/home/javascript.js"></script>
+    </body>
+</html>

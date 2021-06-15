@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt_BR"
+      xmlns:th="http://www.thymeleaf.org"
+      th:fragment="layout(title, links, scripts, content)" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <title th:replace="${title}">Title</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" th:href="@{/resources/styles/banner/banner.css}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous"></script>
+
+    <th:block th:replace="${links}" />
+</head>
+<body>
+    <div class="header">
+        <div class="topbar">
+            <div class="topbarContent">
+
+                    <a href="">Carrinho</a>
+                    <img width="30px" height="30px" src="/resources/images/cart.png">
+                    <a href="">Meus pedidos</a>
+                    <input type="text" placeholder="O que você procura?">
+                    <button>Pesquisar</button>
+
+
+
+                <a href="/home/productRegister" sec:authorize="hasRole('ROLE_ADMIN')">Cadastrar Produto</a>
+                <div class="sign_up" sec:authorize="isAuthenticated()">
+                    <a th:href="@{/loggedUser/myAccount.html}">Minha Conta</a>
+                    <a th:href="@{/logout}" class="sign_up">Sair</a>
+                </div>
+            </div>
+        </div>
+        <div  class="banner">
+            <a th:href="@{/home}"><h1>Rift Shop</h1></a>
+        </div>
+    </div>
+    <div class="navbar">
+        <a class="nav-item" th:href="@{/loadProducts}">
+            <span>Lutador</span>
+            <img src="/resources/images/Fighter_icon.png">
+        </a>
+        <a class="nav-item" href="#">
+            <span>Atirador</span>
+            <img src="/resources/images/Marksman_icon.png">
+        </a>
+        <a class="nav-item" href="#">
+            <span>Assassino</span>
+            <img src="/resources/images/Slayer_icon.png">
+        </a>
+        <a class="nav-item" href="#">
+            <span>Mago</span>
+            <img src="/resources/images/role-icon-mage.png">
+        </a>
+        <a class="nav-item" href="#">
+            <span>Tank</span>
+            <img src="/resources/images/Tank_icon.png">
+        </a>
+        <a class="nav-item" href="#">
+            <span>Suporte</span>
+            <img src="/resources/images/Controller_icon.png">
+        </a>
+    </div>
+    <main th:replace="${content}"></main>
+    <div class="footer2">
+        <p>GBD - IBILCE - São José do Rio Preto</p>
+    </div>
+    <th:block th:replace="${scripts}" />
+</body>
+</html>

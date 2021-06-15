@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html
+        lang="pt_BR"
+        xmlns:th="http://www.thymeleaf.org"
+>
+    <head>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" th:href="@{/resources/styles/banner/banner.css}">
+        <title>Hello WOrld]</title>
+    </head>
+    <body>
+    <div class="header">
+        <div class="topbar">
+            <div class="topbarContent">
+                <div class="topbarContent">
+                    <a href="">Carrinho</a>
+                    <img width="30px" height="30px" src="/resources/images/cart.png">
+                </div>
+                <a href="">Meus pedidos</a>
+                <input type="text" placeholder="O que você procura?">
+                <button>Pesquisar</button>
+                <a href="index.html" id="login">Login</a>
+                <a href="usuarios/cadastro" th:href="@{/usuarios/cadastro}">Registrar-se</a>
+            </div>
+        </div>
+        <div  class="banner">
+            <a href="/templates/home/index.html" th:href="@{/home/index.html}"><h1>Rift Shop</h1></a>
+        </div>
+    </div>
+    <div class="navbar">
+        <a class="nav-item" href="#">
+            <span>Lutador</span>
+            <img src="/resources/images/Fighter_icon.png">
+        </a>
+        <a class="nav-item" href="#">
+            <span>Atirador</span>
+            <img src="/resources/images/Marksman_icon.png">
+        </a>
+        <a class="nav-item" href="#">
+            <span>Assassino</span>
+            <img src="/resources/images/Slayer_icon.png">
+        </a>
+        <a class="nav-item" href="#">
+            <span>Mago</span>
+            <img src="/resources/images/role-icon-mage.png">
+        </a>
+        <a class="nav-item" href="#">
+            <span>Tank</span>
+            <img src="/resources/images/Tank_icon.png">
+        </a>
+        <a class="nav-item" href="#">
+            <span>Suporte</span>
+            <img src="/resources/images/Controller_icon.png">
+        </a>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html
+        lang="pt_BR"
+        xmlns:th="http://www.thymeleaf.org"
+        th:replace="fragments/layout :: layout(~{::title}, ~{::link}, ~{::script}, ~{::main})"
+        xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" th:href="@{/resources/styles/signup/index.css}">
+        <title>Rift Shop</title>
+    </head>
+    <body>
+        <main>
+            <div class="registerreload">
+                <form id="submit-form" action="productRegister.html" th:action="@{/home/productRegister}" th:object="${product}" method="post">
+                    <div class="formRegister">
+                        <h1>Cadastro de Produto</h1>
+                        <p>Nome:</p>
+                        <input
+                                type="text"
+                                class="name"
+                                th:field="*{name}"
+                                placeholder="Digite o nome do produto"
+                                required>
+                        <p>Descrição:</p>
+                        <input
+                                class="description"
+                                type="text"
+                                th:field="*{description}"
+                                placeholder="Digite uma descrição"
+                                required>
+                        <p>Valor:</p>
+                        <input
+                                class="value"
+                                type="text"
+                                th:field="*{value}"
+                                placeholder="Digite o valor do produto"
+                                required>
+                        <p>Estoque:</p>
+                        <input
+                                class="stock"
+                                th:field="*{stock}"
+                                type="text"
+                                placeholder="Digite o estoque a ser cadastrado"
+                                required>
+                        <p>Imagem:</p>
+                        <label for="fileSelection" class="fileInputLabel">Selecione um arquivo de imagem
+                            <input
+                                    id="fileSelection"
+                                    class="image"
+                                    th:field="*{image}"
+                                    type="file"
+                                    required>
+                        </label>
+                        <p>Categorias:</p>
+
+                            <input id="categories" type="hidden" name="categories_name"/>
+                            <div th:id="${category.id}" th:each="category: ${categories}" class="categories">
+                                <div>
+                                    <td th:text="${category.name}"></td>
+                                </div>
+                            </div>
+
+                        <button id="submitButton" class="submit">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <script type="text/javascript" th:src="@{/resources/scripts/fragments/masks.js}"></script>
+        <script type="text/javascript" th:src="@{/resources/scripts/product/productRegister.js}"></script>
+    </body>
+</html>

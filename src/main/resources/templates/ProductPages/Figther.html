@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt_BR"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="fragments/layout :: layout(~{::title}, ~{::link}, ~{::script}, ~{::main})"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/resources/styles/ProductPages/Figther.css}">
+    <title>Rift Shop</title>
+</head>
+<body>
+    <main>
+        <div class="teste1">
+            <div class="sideFilter">
+                <div class="sideContent">
+                    <label>
+                        <input type="checkbox">
+                       Acerto Crítico
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Dano de Ataque
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Letalidade
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Mana
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Penetração de Armadura
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Penetração Mágica
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Regeneração de Mana
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Regeneração de Vida
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Roubo de Vida
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Tempo de Recarga
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Vampirismo Mágico
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Vampirismo Universal
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Vida
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Velocidade de Ataque
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Vampirismo Mágico
+                    </label>
+                </div>
+
+            </div>
+            <div th:each="product : ${products}" class="ProductCard">
+                <img th:src="'RecoveryImage?id_product='+${product.id}"
+                    th:alt="${product.name}">
+                <div class="CardContent">
+                    <h1 th:text="${product.name}"></h1>
+                    <p th:text="${product.description}"></p>
+                </div>
+                <h1 th:text="${product.value}"></h1>
+                <div class="CardButtons">
+                    <button>Comprar</button>
+                    <button>Detalhes</button>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+    <script></script>
+</body>
+</html>

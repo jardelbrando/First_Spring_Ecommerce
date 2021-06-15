@@ -1,0 +1,122 @@
+.formRegister{
+    width: 575px;
+    max-height: 1300px;
+    background-color: #002B49;
+    background-image: linear-gradient(to bottom, #002B49, #003961);
+    border: solid 10px #005794;
+    border-radius: 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    color: #AA9D5B;
+    font-weight: bold;
+    padding: 50px;
+}
+
+.formRegister input{
+    outline: none;
+    border-radius: 20px;
+    height: 30px;
+    width: 400px;
+    background-color: #C4C4C4;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    background-color: #AAA690;
+}
+.registerreload{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.formRegister a{
+    text-decoration: none;
+    color: #AA9D5B;
+    text-decoration: underline;
+    display: flex;
+    flex-direction: column;
+}
+
+.formRegister select{
+    border-radius: 20px;
+    height: 30px;
+    width: 400px;
+    background-color: #C4C4C4;
+    text-align-last: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    background-color: #AAA690;
+}
+
+.formRegister button{
+    font-size: 18px;
+    width: 120px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #C4C4C4;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.formRegister input.description{
+    width: 400px;
+    height: 150px;
+}
+
+.Categorie{
+    text-align: center;
+    width: 400px;
+    align-items: center;
+    display: flex;
+    flex-direction:column;
+}
+
+.Categorie label {
+    width: 300px;
+    display: inline-block;
+    padding-right: 10px;
+    position: relative;
+}
+
+.Categorie label span {
+    vertical-align: middle;
+}
+
+.Categorie input {
+    float: right;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    display: block;
+}
+
+
+input[type='file']{
+    display: none;
+}
+
+.fileInputLabel{
+    background-color: #AA9D5B;
+    border-radius: 5px;
+    color: #002B49;
+    cursor: pointer;
+    margin: 10px;
+    padding: 6px 20px
+}
+
+.fileInputLabel:hover{
+    background-color: #AA9901;
+}
+
+.selected{
+    background-color: white;
+}

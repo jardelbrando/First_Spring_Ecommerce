@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html  lang="pt_BR"
+       xmlns:th="http://www.thymeleaf.org"
+       th:replace="fragments/layout :: layout(~{::title}, ~{::link}, ~{::script}, ~{::main})"
+>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" th:href="@{/resources/styles/home/index.css}">
+        <title>Rift Shop</title>
+    </head>
+    <body>
+        <main>
+            <div class="reload">
+                <div class="slideshow-container">
+
+                    <div class="mySlides">
+                        <img th:src="@{/resources/images/sena.jpg}" alt="">
+                        <div class="text">Senna</div>
+                    </div>
+
+                    <div class="mySlides">
+                        <img th:src="@{/resources/images/vayne.jpg}" alt="">
+                        <div class="text">Vayne</div>
+                    </div>
+
+                    <div class="mySlides">
+                        <img th:src="@{/resources/images/skt.jpg}" alt="">
+                        <div class="text">Skt skins</div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+
+                <div class="content">
+                    <div class="card">
+                        <img th:src="@{/resources/images/Ruptor.png}" alt="Avatar">
+                        <div class="container2">
+                            <p><b>Furacão de Runnan
+                                Preço R$ 2400,00</b></p>
+                            <button>Comprar</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img th:src="@{/resources/images/Lost_Chapter_item_HD.png}" alt="Avatar">
+                        <div class="container2">
+                            <p><b>Furacão de Runnan
+                                Preço R$ 2400,00</b></p>
+                            <button>Comprar</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img th:src="@{/resources/images/tomo.png}" alt="Avatar">
+                        <div class="container2">
+                            <p><b>Furacão de Runnan
+                                Preço R$ 2400,00</b></p>
+                            <button>Comprar</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img th:src="@{/resources/images/B._F._Sword_item_HD.png}" alt="Avatar">
+                        <div class="container2">
+                            <p><b>Furacão de Runnan
+                                Preço R$ 2400,00</b></p>
+                            <button>Comprar</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img th:src="@{/resources/images/Blasting_Wand_item_HD.png}" alt="Avatar">
+                        <div class="container2">
+                            <p><b>Furacão de Runnan
+                                Preço R$ 2400,00</b></p>
+                            <button>Comprar</button>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <img th:src="@{/resources/images/Demonic_Embrace_item_HD.png}" alt="Avatar">
+                        <div class="container2">
+                            <p><b>Furacão de Runnan
+                                Preço R$ 2400,00</b></p>
+                            <button>Comprar</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img th:src="@{/resources/images/Kraken_Slayer_item_HD.png}" alt="Avatar">
+                        <div class="container2">
+                            <p><b>Furacão de Runnan
+                                Preço R$ 2400,00</b></p>
+                            <button>Comprar</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img th:src="@{/resources/images/runan.png}" alt="Avatar">
+                        <div class="container2">
+                            <p><b>Furacão de Runnan
+                                Preço R$ 2400,00</b></p>
+                            <button>Comprar</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img th:src="@{/resources/images/giant.png}" alt="Avatar">
+                        <div class="container2">
+                            <p><b>Furacão de Runnan
+                                Preço R$ 2400,00</b></p>
+                            <button>Comprar</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img th:src="@{/resources/images/hemodranário.png}" alt="Avatar">
+                        <div class="container2">
+                            <p><b>Furacão de Runnan
+                                Preço R$ 2400,00</b></p>
+                            <button>Comprar</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="content2">
+                    <div class="productInfo">
+                        <h1>Nossos produtos</h1>
+                        <p>Nossos produtos são da mais alta qualidade e credibilidade de toda Runeterra.
+                            Possuímos produtos para todo o tipo de pessoa e necessidade, poções, sentinelas,
+                            itens de dano bruto, dano mágico, etc. Aproveite e compre o que lhe apetecer.</p>
+                    </div>
+                    <div class="shopInfo">
+                        <h1>Onde atendemos?</h1>
+                        <img th:src="@{/resources/images/lolja.jpg}">
+                        <p>Nosso estabelecimento físico fica localizado em Summoner’s Rift,
+                            possuímos duas filiais, uma em cada fonte, venha nos visitar.</p>
+
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="info1">
+                        <h1>Atendimento</h1>
+                        <p>Endereço: Summoner’s Rift, fonte azul e fonte vermelha
+                            Telefone de contato: xxxx-xxxxx
+                            Email: RiftShop@gmail.com
+                            Horário de atendimento: das 8 às 18:00 de segunda a sexta
+                        </p>
+                        <img th:src="@{/resources/images/image 11.png}" alt="">
+                        <p> Atendimento 24 horas via Whatssap: xxxxx-xxxxx</p>
+                    </div>
+                    <div class="info2">
+                        <h1>Siga nossas redes sociais</h1>
+                        <a href="#"><img th:src="@{/resources/images/image 8.png}" alt=""></a>
+                        <a href="#"><img th:src="@{/resources/images/image 9.png}" alt=""></a>
+                        <a href="#"><img th:src="@{/resources/images/image 10.png}" alt=""></a>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+        <script type="text/javascript" th:src="@{/resources/scripts/home/index.js}"></script>
+    </body>
+</html>
